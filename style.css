@@ -59,6 +59,7 @@ header {
 header h1 {
   font-size: 1.25rem;
   margin: 0.75rem 0;
+  color: var(--dark-saturated-blue);
 }
 
 header p {
@@ -366,6 +367,10 @@ button:hover {
   main {
     margin: 3rem 0 0 0;
     height: calc(100vh - 3rem);
+  }
+
+  header h1 {
+    font-size: 2rem;
   }
 
   h2 {
