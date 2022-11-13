@@ -107,6 +107,10 @@ input[type="range"] {
   background-size: 50% 100%;
 }
 
+input[type="range"]:hover::-webkit-slider-thumb {
+  background-color: var(--primary-cyan);
+}
+
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
@@ -166,19 +170,25 @@ h2 span {
   flex-direction: row;
   gap: 0.875rem;
   color: var(--grayish-blue);
+  padding: 0rem;
+  justify-content: center;
 }
 
 .billing p {
   font-size: 0.75rem;
 }
 
-.billing p span {
+.discount {
   color: var(--primary-red);
   background-color: var(--grayish-red);
   padding: 0.25rem 0.5rem;
   border-radius: 25px;
   font-size: 0.65rem;
   font-weight: 600;
+}
+
+.discount span {
+  display: none;
 }
 
 .switch {
@@ -218,12 +228,20 @@ h2 span {
   transition: 0.4s;
 }
 
+input:hover {
+  cursor: pointer;
+}
+
+input:hover + .slider {
+  background-color: var(--primary-cyan);
+}
+
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: var(--primary-cyan);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px var(--primary-cyan);
 }
 
 input:checked + .slider:before {
@@ -232,7 +250,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -279,6 +296,16 @@ button {
   max-inline-size: 200px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 375px) {
+  .billing {
+    padding: 0 2rem;
+  }
+}
+
 @media (min-width: 600px) {
   header {
     padding: 3rem 0;
@@ -288,6 +315,50 @@ button {
   }
   main > div {
     gap: 2.75rem;
+  }
+
+  .discount span {
+    display: inline;
+  }
+}
+
+@media (min-width: 768px) {
+  .calc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: baseline;
+  }
+
+  .calc p {
+    order: 1;
+    font-size: 1rem;
+  }
+
+  .calc h2 {
+    order: 2;
+    justify-content: flex-end;
+  }
+
+  .calc input {
+    order: 3;
+    grid-column: 1/-1;
+  }
+
+  .billing {
+    justify-content: end;
+    width: 100%;
+  }
+
+  .bottom {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .bottom ul {
+    align-items: flex-start;
+  }
+  button {
+    margin: 2rem;
   }
 }
 
@@ -305,38 +376,6 @@ button {
   input[type="range"] {
     margin-top: 1rem;
   }
-
-  .calc {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: baseline;
-  }
-
-  .calc p {
-    order: 1;
-    font-size: 1rem;
-  }
-
-  .calc h2 {
-    order: 2;
-  }
-
-  .calc input {
-    order: 3;
-    grid-column: 1/-1;
-  }
-
-  .bottom {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-
-  .bottom ul {
-    align-items: flex-start;
-  }
-  button {
-    margin: 2rem;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -346,10 +385,5 @@ button {
 
   section div {
     flex-direction: row;
-  }
-
-  .billing {
-    align-self: flex-start;
-    width: 100;
   }
 }
