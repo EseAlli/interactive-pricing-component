@@ -26,7 +26,16 @@
             <label class="pageviews" for="range"
               >100k <span>Pageviews</span></label
             >
-            <input type="range" class="range" value="16" id="range" />
+
+            <input
+              type="range"
+              class="range"
+              value="16"
+              id="range"
+              oninput="rangevalue.value=value"
+              min="0"
+              max="32"
+            />
             <h2>$16.00 <span>/ month</span></h2>
           </div>
 

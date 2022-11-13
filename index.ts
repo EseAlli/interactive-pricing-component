@@ -6,13 +6,19 @@ let yearlyDiscount: boolean = toggleBilling.checked;
 let currentPageview: string = "100K";
 range.addEventListener("change", pricing);
 
-toggleBilling.addEventListener("click", function () {
+toggleBilling.addEventListener("input", function () {
   this.checked = !yearlyDiscount;
   yearlyDiscount = this.checked;
   pricing();
 });
 
 function pricing() {
+  const min: number = Number(range.min);
+  const max: number = Number(range.max);
+  const val: number = Number(range.value);
+
+  range.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
+
   let priceRange: any = Number(range.value).toFixed(2);
   priceRange = !yearlyDiscount ? priceRange : priceRange / 0.25;
   currentPageview = !yearlyDiscount
