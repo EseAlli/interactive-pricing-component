@@ -9,6 +9,7 @@ range.addEventListener("change", pricing);
 toggleBilling.addEventListener("click", function () {
   this.checked = !yearlyDiscount;
   yearlyDiscount = this.checked;
+  pricing();
 });
 
 function pricing() {
