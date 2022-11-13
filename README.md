@@ -50,8 +50,7 @@ I learnt how to use Typescript in a vanilla js project. I also learnt how to sty
 
 ### Useful resources
 
-- [Styling range input with CSS and JavaScript for better UX](https://nikitahl.com/style-range-input-css) - This helped me understand how to properly style a range input
-
+- [Styling range input with CSS and JavaScript for better UX](https://nikitahl.com/style-range-input-css) - This helped me understand how to properly style a range input -[Creating A Custom Range Input That Looks Consistent Across All Browsers](https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/) - This help me understand how to style the range input tag across all browsers.
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) - This helped me understand how to set up typescript and understand the primart types in typescript.
 
 ## Author
