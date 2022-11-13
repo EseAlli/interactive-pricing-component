@@ -156,6 +156,7 @@ h2 {
   align-items: center;
   font-family: "Manrope", sans-serif;
   font-weight: 600;
+  color: var(--dark-saturated-blue);
 }
 
 h2 span {
@@ -330,7 +331,7 @@ button:hover {
     align-items: baseline;
   }
 
-  .calc p {
+  .calc label {
     order: 1;
     font-size: 1rem;
   }

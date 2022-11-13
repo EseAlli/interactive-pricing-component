@@ -23,16 +23,17 @@
         </header>
         <section>
           <div class="calc">
-            <p class="pageviews">100k <span>Pageviews</span></p>
-            <input type="range" class="range" value="16" />
+            <label class="pageviews" for="range"
+              >100k <span>Pageviews</span></label
+            >
+            <input type="range" class="range" value="16" id="range" />
             <h2>$16.00 <span>/ month</span></h2>
           </div>
 
           <div class="billing">
             <p>Monthly Billing</p>
-            <label class="switch">
-              <label></label>
-              <input type="checkbox" />
+            <label class="switch" for="slider">
+              <input type="checkbox" id="slider" />
               <span class="slider round"></span>
             </label>
             <p>
