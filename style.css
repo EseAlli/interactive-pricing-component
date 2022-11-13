@@ -135,7 +135,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 2.5rem;
   border-radius: 50%;
   background-color: var(--secondary-cyan);
-  background-image: url(../images/icon-slider.svg);
+  background-image: url(./images/icon-slider.svg);
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -150,7 +150,7 @@ input[type="range"]::-moz-range-track {
   width: 2.5rem;
   border-radius: 50%;
   background-color: var(--secondary-cyan);
-  background-image: url(../images/icon-slider.svg);
+  background-image: url(./images/icon-slider.svg);
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -387,7 +387,7 @@ button:hover {
 
 @media (min-width: 992px) {
   main {
-    margin: 3rem 0 0 0;
+    margin: 4rem 0 0 0;
     height: calc(100vh - 3rem);
   }
 
